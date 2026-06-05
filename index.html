@@ -379,8 +379,7 @@ function loadState() {
 
 function exportHTML() {
   // Build new SLIDES_DATA from current order
-  const newSlidesData = slides.map(s => `  {src:"${s.src}",label:"${s.label}",thumb:"${s.thumb}"}`).join(',
-');
+  const newSlidesData = slides.map(s => `  {src:"${s.src}",label:"${s.label}",thumb:"${s.thumb}"}`).join(',\n');
   let html = document.documentElement.outerHTML;
   // Replace slides data
   html = html.replace(/const SLIDES_DATA = \[[\s\S]*?\];/, `const SLIDES_DATA = [
