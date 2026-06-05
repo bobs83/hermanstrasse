@@ -349,7 +349,7 @@ function saveState() {
   document.querySelectorAll('.editable').forEach((el, i) => { textData['e'+i] = el.innerHTML; });
   const meta = slides.map(s => ({src:s.src, label:s.label, hidden:s.hidden}));
   try {
-    localStorage.setItem('apt_v3', JSON.stringify({textData, meta}));
+    localStorage.setItem('apt_v4', JSON.stringify({textData, meta}));
     const f = document.getElementById('saved-flash');
     f.style.display = 'inline';
     setTimeout(() => f.style.display = 'none', 2000);
@@ -358,7 +358,7 @@ function saveState() {
 
 function loadState() {
   try {
-    const raw = localStorage.getItem('apt_v3');
+    const raw = localStorage.getItem('apt_v4');
     if (!raw) return;
     const saved = JSON.parse(raw);
     if (saved.textData) {
