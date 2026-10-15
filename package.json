@@ -1,0 +1,13 @@
+{
+  "name": "hermanstrasse",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Hermanstrasse apartment building website",
+  "scripts": {
+    "lint": "htmlhint index.html",
+    "test": "node scripts/check-js-syntax.js"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4"
+  }
+}
